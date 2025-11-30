@@ -52,7 +52,6 @@ I Learned to use the setTimeout() to have text animations with transitions occur
 When it comes to continued development, I'll be continuing to sharpen my skills with JavaScript and as I've mentioned in the past, I'll be picking fraemworks based on task complexity and requirements for project efficiency.
 
 
-
 ### Useful resources
 
 - [Mikes magical mobile menu](https://codepen.io/tiffachoo/pen/yzZRXK) - Mikes mobile menu animation codepen helped me with creating the animation transitions to take effect for the mobile menu displays and transitions for displaying the different hero images and texts for the user after clicking the arrow buttons on the challenge.

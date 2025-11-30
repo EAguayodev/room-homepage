@@ -29,7 +29,10 @@ let textDescription = [
 let heroBgImages = [
     "images/desktop-image-hero-1.jpg",
     "images/desktop-image-hero-2.jpg",
-    "images/desktop-image-hero-3.jpg"
+    "images/desktop-image-hero-3.jpg",
+    "images/mobile-image-hero-1.jpg",
+    "images/mobile-image-hero-2.jpg",
+    "images/mobile-image-hero-3.jpg"
 ];
 
 function updateHeroContent(index) {

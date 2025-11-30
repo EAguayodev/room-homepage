@@ -186,16 +186,16 @@ body {
 }
 
 /* tablet devices */
-@media(max-width: 1024px) {
+@media(max-width: 64rem) {
     .navigation {
         justify-content: flex-start;
         gap: 300px;
     }
 
-    .toggle-nox{
+    .toggle-nox {
         position: relative;
-            top: -7.5rem;
-            left: 38.2rem;
+        top: -7.5rem;
+        left: 38.2rem;
     }
 
     .btn-menu-toggle {
@@ -215,24 +215,24 @@ body {
         display: block;
     }
 
-        .menu-list {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: var(--white);
-            padding: 2rem;
-            gap: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* Hidden state */
-            transform: translateY(-100%);
-            opacity: 0;
-            pointer-events: none;
-            transition: transform 0.5s ease, opacity 0.5s ease;
-            z-index: 10;
-        }
+    .menu-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: 2rem;
+        gap: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Hidden state */
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        z-index: 10;
+    }
 
 
     .menu-list.active {
@@ -260,7 +260,7 @@ body {
         height: 400px;
     }
 
-    .grid-2{
+    .grid-2 {
         flex-direction: column-reverse;
     }
 
@@ -272,7 +272,7 @@ body {
 }
 
 /* mobile devices */
-@media(max-width: 500px) {
+@media(max-width: 48rem) {
     .navigation {
         /* padding: 2rem 1.5rem; */
         gap: 100px;

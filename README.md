@@ -27,10 +27,13 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [Github](https://github.com/EAguayodev/room-homepage)
+- Live Site URL: [Netlify](https://room-homepge.netlify.app/)
 
 ## My process
+- Take a look at the figma designs downloaded to create css class names and plan for the JavaScript code ahead of time to tackle the requirements of what the challenge was about.
+- Structure the html content with written out class names for a fluid flow of making the challenge responsive.
+- Write out JavaScript for toggling the menu, grabbing images, heading, and descriptions inside an array for displaying when user clicked arrow buttons.
 
 ### Built with
 
@@ -38,30 +41,22 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
+- Vanilla JavaScript 
 - Desktop-first workflow
 
 ### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
+I Learned to use the setTimeout() to have text animations with transitions occur when clicking the arrow buttons for different texts and background images displaying.
 
 
 ### Continued development
+When it comes to continued development, I'll be continuing to sharpen my skills with JavaScript and as I've mentioned in the past, I'll be picking fraemworks based on task complexity and requirements for project efficiency.
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Mikes magical mobile menu](https://codepen.io/tiffachoo/pen/yzZRXK) - Mikes mobile menu animation codepen helped me with creating the animation transitions to take effect for the mobile menu displays and transitions for displaying the different hero images and texts for the user after clicking the arrow buttons on the challenge.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-
-
-
-## Acknowledgments
+- Frontend Mentor - [@EAguayodev](https://www.frontendmentor.io/profile/EAguayodev)

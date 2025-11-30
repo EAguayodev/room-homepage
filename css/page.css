@@ -1,24 +1,312 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --white: #FFFFFF;
     --black: #000000;
-    --grey-800:#444444;
+    --grey-800: #444444;
     --grey-500: #A0A0A0;
     --grey-200: #d8d8d8;
     --grey-100: #efefef;
     --grey-50: #fafafa;
 }
 
+body {
+    font-family: "League Spartan", sans-serif;
+}
+
+.btn-menu-toggle {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 2rem 3rem;
+    align-items: center;
+}
+
+.menu-list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.menu-list a:hover {
+    width: 2px;
+    height: 20px;
+    border-bottom: 3px solid var(--white);
+    padding: 10.5px 0;
+}
+
+.column-top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.column-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-1 {
+    background-image: url("../images/desktop-image-hero-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 1 / span 1;
+}
+
+.grid-2 {
+    padding: 4rem 3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.grid-2 h1 {
+    font-size: 3rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    width: 26rem;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.grid-2 p {
+    color: var(--grey-500);
+    font-size: 1rem;
+    line-height: 1.8;
+    width: 26rem;
+    margin-bottom: 2rem;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.grid-2 h1.fade-out,
+.grid-2 p.fade-out {
+    opacity: 0;
+}
+
+.grid-2 .btn-shop-now {
+    color: var(--black);
+    border: none;
+    background: none;
+    font-size: 0.938rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    letter-spacing: 15px;
+    gap: 30px;
+}
+
+.grid-3 {
+    background-image: url("../images/image-about-dark.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.grid-4 {
+    padding: 3rem 3rem;
+    position: relative;
+}
+
+.grid-4 h2 {
+    font-size: 1rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    letter-spacing: 10PX;
+}
+
+.grid-4 p {
+    color: var(--grey-500);
+    font-size: 1rem;
+    line-height: 1.8;
+    width: 30.25rem;
+}
+
+.grid-5 {
+    background-image: url("../images/image-about-light.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.toggle-nox {
+    position: relative;
+    top: 4rem;
+    right: 3rem;
+}
+
+.btn-angle-left,
+.btn-angle-right {
+    border: none;
+    background: var(--black);
+    cursor: pointer;
+    padding: 1rem 2rem;
+    gap: 0px;
+}
+
+.btn-shop-now:hover {
+    color: var(--grey-500)
+}
+
+.btn-angle-left:hover,
+.btn-angle-right:hover {
+    background: var(--grey-800);
+}
+
 .attribution {
-    font-size: 11px;
+    font-size: 1rem;
     text-align: center;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/* tablet devices */
+@media(max-width: 1024px) {
+    .navigation {
+        justify-content: flex-start;
+        gap: 300px;
+    }
+
+    .toggle-nox{
+        position: relative;
+            top: -7.5rem;
+            left: 38.2rem;
+    }
+
+    .btn-menu-toggle {
+        display: block;
+        z-index: 12;
+    }
+
+    .hamburger.hide {
+        display: none;
+    }
+
+    .close-icon {
+        display: none;
+    }
+
+    .close-icon.show {
+        display: block;
+    }
+
+        .menu-list {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            padding: 2rem;
+            gap: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Hidden state */
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            z-index: 10;
+        }
+
+
+    .menu-list.active {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .menu-list a {
+        color: var(--black);
+        position: relative;
+        left: 10rem;
+    }
+
+    .column-top {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .column-bottom {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-1 {
+        height: 400px;
+    }
+
+    .grid-2{
+        flex-direction: column-reverse;
+    }
+
+    .grid-3,
+    .grid-5 {
+        height: 300px;
+    }
+
+}
+
+/* mobile devices */
+@media(max-width: 500px) {
+    .navigation {
+        /* padding: 2rem 1.5rem; */
+        gap: 100px;
+    }
+
+    .menu-list a {
+        position: relative;
+        left: 2.5rem;
+    }
+
+    .grid-1 {
+        background-image: url("../images/mobile-image-hero-1.jpg");
+    }
+
+    .toggle-nox {
+        top: -7.5rem;
+        right: 1.5rem;
+        left: 9.5rem;
+    }
+
+    .grid-2 {
+        flex-direction: column-reverse;
+    }
+
+    .grid-2 h1 {
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .grid-2 p {
+        width: 100%;
+    }
+
+    .grid-4 p {
+        width: 100%;
+    }
 }

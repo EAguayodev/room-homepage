@@ -27,12 +27,15 @@ let textDescription = [
 ];
 
 let heroBgImages = [
-    "images/desktop-image-hero-1.jpg",
-    "images/desktop-image-hero-2.jpg",
-    "images/desktop-image-hero-3.jpg",
-    "images/mobile-image-hero-1.jpg",
-    "images/mobile-image-hero-2.jpg",
-    "images/mobile-image-hero-3.jpg"
+  "images/desktop-image-hero-1.jpg",
+  "images/desktop-image-hero-2.jpg",
+  "images/desktop-image-hero-3.jpg",
+];
+
+let heroBgImagesMobile = [
+  "images/mobile-image-hero-1.jpg",
+  "images/mobile-image-hero-2.jpg",
+  "images/mobile-image-hero-3.jpg",
 ];
 
 function updateHeroContent(index) {
@@ -47,6 +50,10 @@ function updateHeroContent(index) {
   // Wait for fade-out, then update content and fade back in
   setTimeout(() => {
     heroSection.style.backgroundImage = `url('${heroBgImages[index]}')`;
+    if (window.innerWidth < 768) {
+      heroSection.style.backgroundImage = `url('${heroBgImagesMobile[index]}')`;
+    }
+    
     headingElement.textContent = headingText[index];
     descriptionElement.textContent = textDescription[index];
 
